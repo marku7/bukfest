@@ -27,10 +27,9 @@ body {
 }
 
 html {
-  scroll-padding-top: 72px; /* Ensures scroll targets account for fixed navbar */
+  scroll-padding-top: 72px;
 }
 
-/* Reset button styles */
 button {
   all: unset;
   box-sizing: border-box;
@@ -44,7 +43,7 @@ button {
   background-image: url(../images/bg.png);
   background-size: cover;
   background-position: 50% 50%;
-  padding-top: 72px; /* Add padding equal to navbar height */
+  padding-top: 72px;
 }
 
 .JUMBLETRON .COUNTDOWN-TIMER {
@@ -486,7 +485,7 @@ button {
 .about-bukfest .icon-heart-wrapper {
   position: absolute;
   width: 64px;
-  height: 64px;
+  height: 64px; 
   top: 32px;
   left: 208px;
   border-radius: var(--border-radius-full);

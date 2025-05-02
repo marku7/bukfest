@@ -4,6 +4,113 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="assets/css/globals.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUKFEST 2025</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#1a56db", secondary: "#f59e0b" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      }
+      .festival-font {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      }
+      .countdown-item {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      min-width: 80px;
+      text-align: center;
+      }
+      .speaker-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .ticket-card:hover {
+      transform: translateY(-5px);
+      }
+      .nav-link {
+      position: relative;
+      }
+      .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #1a56db;
+      transition: width 0.3s;
+      }
+      .nav-link:hover::after {
+      width: 100%;
+      }
+      .active::after {
+      width: 100%;
+      }
+      .hero-pattern {
+      background-image: url('https://public.readdy.ai/ai/img_res/a79a944d2f7d6717d8bfeeefae1848ad.jpg');
+      background-size: cover;
+      background-position: center;
+      }
+      .schedule-item:hover {
+      background-color: rgba(26, 86, 219, 0.05);
+      }
+      .nav a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .button a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .GET-TICKETS a {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
   </head>
   <body>
     <div class="JUMBLETRON" data-model-id="5:3">
@@ -30,7 +137,7 @@
         <div class="buttons" style="height: 60px;">
           <div class="GET-TICKETS">
             <img class="icon" src="assets/images/ticket.png" />
-            <div class="text-wrapper-9">Get Your Tickets</div>
+            <a href="#tickets" class="text-wrapper-9">Get Your Tickets</a>
           </div>
           <div class="WATCH-PROMO">
             <div class="vector-wrapper"><img class="vector" src="assets/images/watch.png" /></div>
@@ -45,19 +152,19 @@
       <div class="nav">
         <div class="overlap-group">
           <div class="container">
-            <div class="link"><div class="text-wrapper-12">About</div></div>
-            <div class="div-wrapper"><div class="text-wrapper-13">Schedule</div></div>
-            <div class="link-2"><div class="text-wrapper-14">Speakers</div></div>
-            <div class="link-3"><div class="text-wrapper-15">Exhibitors</div></div>
-            <div class="link-4"><div class="text-wrapper-16">Tickets</div></div>
-            <div class="link-5"><div class="text-wrapper-17">Contact</div></div>
-            <button class="button"><div class="text-wrapper-18">Get Tickets</div></button>
+            <div class="link"><a href="#about" class="text-wrapper-12">About</a></div>
+            <div class="div-wrapper"><a href="#schedule" class="text-wrapper-13">Schedule</a></div>
+            <div class="link-2"><a href="#speakers" class="text-wrapper-14">Speakers</a></div>
+            <div class="link-3"><a href="#exhibitors" class="text-wrapper-15">Exhibitors</a></div>
+            <div class="link-4"><a href="#tickets" class="text-wrapper-16">Tickets</a></div>
+            <div class="link-5"><a href="#contact" class="text-wrapper-17">Contact</a></div>
+            <button class="button"><a href="#tickets" class="text-wrapper-18">Get Tickets</a></button>
           </div>
           <img class="logo-BUKFEST-HORIZ" src="assets/images/bukfest.png" />
         </div>
       </div>
     </div>
-    <div class="about-bukfest" data-model-id="5:38">
+    <div class="about-bukfest" id="about" data-model-id="5:38">
       <div class="container">
         <div class="overlap">
           <div class="text-wrapper">About</div>
@@ -112,7 +219,7 @@
         </div>
       </div>
     </div>
-    <div class="section" data-model-id="5:88">
+    <div class="section" id="schedule" data-model-id="5:88">
         <div class="container">
           <div class="overlap">
             <div class="heading-event">Event Schedule</div>
@@ -214,84 +321,1440 @@
         </div>
         <div class="blue-extension"></div>
       </div>
-      <div class="white-section-divider"></div>
-      <div class="section-SPEAKERS" data-model-id="5:149">
-        <div class="container">
-          <div class="heading-featured">Featured Speakers</div>
-          <div class="background"></div>
-          <div class="meet-our-lineup-of-wrapper">
-            <p class="meet-our-lineup-of">
-              Meet our lineup of industry experts, cultural leaders, and innovators who will share<br />their knowledge
-              and insights at BUKFEST 2025.
+      <section id="speakers" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+              Featured Speakers
+            </h2>
+            <div class="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+              Meet our lineup of industry experts, cultural leaders, and
+              innovators who will share their knowledge and insights at BUKFEST
+              2025.
             </p>
           </div>
-          <div class="div">
-            <button class="button"><div class="text-wrapper">All Speakers</div></button>
-            <button class="div-wrapper"><div class="text-wrapper-2">Business</div></button>
-            <button class="button-2"><div class="text-wrapper-3">Culture</div></button>
-            <button class="button-3"><div class="text-wrapper-4">Innovation</div></button>
-            <button class="button-4"><div class="text-wrapper-5">Agriculture</div></button>
-          </div>
-          <div class="CARD-SPEAKER">
-            <div class="heading-jan-ocampo">Jan Ocampo</div>
-            <div class="text-wrapper-6">Financial Influencer</div>
-            <p class="leading-financial">
-              Leading financial expert helping<br />businesses and individuals navigate<br />economic challenges through
-              innovative<br />strategies.
-            </p>
-            <div class="link"><img class="icon" src="assets/images/x.png" /></div>
-            <div class="icon-wrapper"><img class="icon" src="assets/images/l.png" /></div>
-            <div class="img-wrapper"><img class="icon" src="assets/images/f.png" /></div>
-            <div class="overlap-group">
-              <div class="jan-ocampo"><img class="THE-PRESENT" src="assets/images/janocampo.png" /></div>
-              <div class="background-2"><div class="text-wrapper-7">Keynote Speaker</div></div>
+          <div class="flex mb-8 justify-center">
+            <div class="inline-flex bg-gray-100 p-1 rounded-full">
+              <button
+                class="px-4 py-2 rounded-full bg-primary text-white font-medium whitespace-nowrap"
+              >
+                All Speakers
+              </button>
+              <button
+                class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 font-medium whitespace-nowrap"
+              >
+                Business
+              </button>
+              <button
+                class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 font-medium whitespace-nowrap"
+              >
+                Culture
+              </button>
+              <button
+                class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 font-medium whitespace-nowrap"
+              >
+                Innovation
+              </button>
+              <button
+                class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 font-medium whitespace-nowrap"
+              >
+                Agriculture
+              </button>
             </div>
           </div>
-          <div class="background-shadow">
-            <div class="heading-maria-datu">Maria Datu</div>
-            <div class="text-wrapper-8">Cultural Heritage Advocate</div>
-            <p class="dedicated-to">
-              Dedicated to preserving and promoting<br />indigenous cultural practices and<br />traditions of Bukidnon
-              communities.
-            </p>
-            <div class="link-2"><img class="icon" src="assets/images/x.png" /></div>
-            <div class="link-3"><img class="icon" src="assets/images/l.png" /></div>
-            <div class="link-4"><img class="icon" src="assets/images/f.png" /></div>
-            <div class="overlap">
-              <div class="background-3"><div class="text-wrapper-9">Cultural Expert</div></div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="speaker-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
+            >
+              <div class="relative">
+                <img
+                  src="https://public.readdy.ai/ai/img_res/4e9a8fa6fbd650eee209c3b793f385c6.jpg"
+                  alt="Jan Ocampo"
+                  class="w-full h-64 object-cover object-top"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  Keynote Speaker
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-1">Jan Ocampo</h3>
+                <p class="text-primary mb-3">Financial Influencer</p>
+                <p class="text-gray-700 mb-4 text-sm">
+                  Leading financial expert helping businesses and individuals
+                  navigate economic challenges through innovative strategies.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-twitter-x-line ri-sm"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-800 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-linkedin-line ri-sm"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-facebook-circle-line ri-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="speaker-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
+            >
+              <div class="relative">
+                <img
+                  src="https://public.readdy.ai/ai/img_res/0db1840e0ee0cab083ac5bded9dd094b.jpg"
+                  alt="Maria Datu"
+                  class="w-full h-64 object-cover object-top"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  Cultural Expert
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-1">Maria Datu</h3>
+                <p class="text-primary mb-3">Cultural Heritage Advocate</p>
+                <p class="text-gray-700 mb-4 text-sm">
+                  Dedicated to preserving and promoting indigenous cultural
+                  practices and traditions of Bukidnon communities.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-twitter-x-line ri-sm"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-800 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-linkedin-line ri-sm"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-facebook-circle-line ri-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="speaker-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
+            >
+              <div class="relative">
+                <img
+                  src="https://public.readdy.ai/ai/img_res/c2bf6b967439fd166c40f43690b6442f.jpg"
+                  alt="Carlos Reyes"
+                  class="w-full h-64 object-cover object-top"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  Tech Innovator
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-1">Carlos Reyes</h3>
+                <p class="text-primary mb-3">AgriTech Entrepreneur</p>
+                <p class="text-gray-700 mb-4 text-sm">
+                  Pioneering sustainable agricultural technology solutions that
+                  combine traditional farming wisdom with modern innovation.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-twitter-x-line ri-sm"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-800 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-linkedin-line ri-sm"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-facebook-circle-line ri-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="speaker-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300"
+            >
+              <div class="relative">
+                <img
+                  src="https://public.readdy.ai/ai/img_res/cf8172ed0e82dbdb79453850641692fd.jpg"
+                  alt="Elena Reyes"
+                  class="w-full h-64 object-cover object-top"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-blue-400 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  Marketing Expert
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-1">Elena Reyes</h3>
+                <p class="text-primary mb-3">Digital Marketing Specialist</p>
+                <p class="text-gray-700 mb-4 text-sm">
+                  Helping local businesses leverage digital platforms to reach new
+                  markets while preserving cultural authenticity.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-twitter-x-line ri-sm"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-800 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-linkedin-line ri-sm"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors"
+                  >
+                    <i class="ri-facebook-circle-line ri-sm"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="background-shadow-2">
-            <div class="heading-carlos">Carlos Reyes</div>
-            <div class="text-wrapper-10">AgriTech Entrepreneur</div>
-            <p class="pioneering">
-              Pioneering sustainable agricultural<br />technology solutions that combine<br />traditional farming wisdom
-              with modern<br />innovation.
-            </p>
-            <div class="link"><img class="icon" src="assets/images/x.png" /></div>
-            <div class="icon-wrapper"><img class="icon" src="assets/images/l.png" /></div>
-            <div class="img-wrapper"><img class="icon" src="assets/images/f.png" /></div>
-            <div class="background-wrapper">
-              <div class="background-4"><div class="text-wrapper-11">Tech Innovator</div></div>
-            </div>
+          <div class="mt-12 text-center">
+            <button
+              class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-button font-bold hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+            >
+              View All Speakers
+            </button>
           </div>
-          <div class="background-shadow-3">
-            <div class="heading-elena">Elena Reyes</div>
-            <div class="text-wrapper-12">Digital Marketing Specialist</div>
-            <p class="helping-local">
-              Helping local businesses leverage digital<br />platforms to reach new markets while<br />preserving cultural
-              authenticity.
-            </p>
-            <div class="link-2"><img class="icon" src="assets/images/x.png" /></div>
-            <div class="link-3"><img class="icon" src="assets/images/l.png" /></div>
-            <div class="link-4"><img class="icon" src="assets/images/f.png" /></div>
-            <div class="overlap-2">
-              <div class="background-5"><div class="text-wrapper-13">Marketing Expert</div></div>
-            </div>
-          </div>
-          <button class="button-5"><div class="text-wrapper-14">View All Speakers</div></button>
         </div>
-      </div>
-      
+      </section>
+      <!-- Exhibitors Section -->
+      <section id="exhibitors" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+              Business Booths & Exhibitors
+            </h2>
+            <div class="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+              Discover innovative local businesses, artisans, and organizations
+              showcasing their products, services, and initiatives at BUKFEST
+              2025.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center">
+                    <div
+                      class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary"
+                    >
+                      <i class="ri-store-2-line ri-lg"></i>
+                    </div>
+                    <div class="ml-3">
+                      <h3 class="text-lg font-bold text-gray-900">
+                        Local Artisan Market
+                      </h3>
+                      <p class="text-gray-600 text-sm">Traditional Crafts</p>
+                    </div>
+                  </div>
+                  <span
+                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium"
+                  >
+                    Zone A
+                  </span>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Showcase of handcrafted textiles, baskets, jewelry, and other
+                  traditional crafts made by indigenous artisans from across
+                  Bukidnon.
+                </p>
+                <div class="flex -space-x-2 mb-4">
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/ddb157d6d5a571cda7448b3a4dfcd444.jpg"
+                    alt="Traditional Basket"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  />
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/42e724c7c42167ad99080824b8f062c9.jpg"
+                    alt="Traditional Textile"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  />
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/eca8daaf36808f2f12e70b88d8d213ad.jpg"
+                    alt="Traditional Jewelry"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  />
+                </div>
+                <button
+                  class="w-full bg-gray-100 text-gray-800 py-2 rounded-button font-medium hover:bg-gray-200 transition-colors flex items-center justify-center whitespace-nowrap"
+                >
+                  <i class="ri-map-pin-line ri-sm mr-2"></i>
+                  Find on Map
+                </button>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center">
+                    <div
+                      class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600"
+                    >
+                      <i class="ri-plant-line ri-lg"></i>
+                    </div>
+                    <div class="ml-3">
+                      <h3 class="text-lg font-bold text-gray-900">
+                        Sustainable Agriculture
+                      </h3>
+                      <p class="text-gray-600 text-sm">Farm to Table</p>
+                    </div>
+                  </div>
+                  <span
+                    class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium"
+                  >
+                    Zone B
+                  </span>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Local farmers and agricultural businesses showcasing sustainable
+                  farming practices, organic produce, and innovative agricultural
+                  technologies.
+                </p>
+                <div class="flex -space-x-2 mb-4">
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/fbcfe0f9a3c0f7f69672ddd1ef53186e.jpg"
+                    alt="Organic Produce"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  />
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/86aa67463ff5ea8843531a3324f1381e.jpg"
+                    alt="Agricultural Technology"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  />
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/2fa7d678333c71a0bfa53c28b6605284.jpg"
+                    alt="Coffee Beans"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  />
+                </div>
+                <button
+                  class="w-full bg-gray-100 text-gray-800 py-2 rounded-button font-medium hover:bg-gray-200 transition-colors flex items-center justify-center whitespace-nowrap"
+                >
+                  <i class="ri-map-pin-line ri-sm mr-2"></i>
+                  Find on Map
+                </button>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center">
+                    <div
+                      class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600"
+                    >
+                      <i class="ri-lightbulb-line ri-lg"></i>
+                    </div>
+                    <div class="ml-3">
+                      <h3 class="text-lg font-bold text-gray-900">
+                        Innovation Hub
+                      </h3>
+                      <p class="text-gray-600 text-sm">Tech Startups</p>
+                    </div>
+                  </div>
+                  <span
+                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium"
+                  >
+                    Zone C
+                  </span>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Local tech startups and innovators demonstrating cutting-edge
+                  solutions addressing regional challenges in agriculture,
+                  education, and healthcare.
+                </p>
+                <div class="flex -space-x-2 mb-4">
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/f76f597285f944bf1a3d769f8c2a7ef6.jpg"
+                    alt="AgriTech Device"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  />
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/eaec78fcc09a2b80e676161868dd192a.jpg"
+                    alt="EdTech App"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  />
+                  <img
+                    src="https://public.readdy.ai/ai/img_res/f46eb5974f43b1711d2746f5c7ec1344.jpg"
+                    alt="Healthcare Device"
+                    class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  />
+                </div>
+                <button
+                  class="w-full bg-gray-100 text-gray-800 py-2 rounded-button font-medium hover:bg-gray-200 transition-colors flex items-center justify-center whitespace-nowrap"
+                >
+                  <i class="ri-map-pin-line ri-sm mr-2"></i>
+                  Find on Map
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-6">
+                Become an Exhibitor
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <p class="text-gray-700 mb-4">
+                    Showcase your business, products, or initiatives at BUKFEST
+                    2025. Connect with potential customers, partners, and
+                    investors in this vibrant gathering of innovators and cultural
+                    enthusiasts.
+                  </p>
+                  <div class="space-y-4 mb-6">
+                    <div class="flex items-start">
+                      <div
+                        class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 mt-0.5 mr-3"
+                      >
+                        <i class="ri-check-line ri-sm"></i>
+                      </div>
+                      <p class="text-gray-700">
+                        Access to over 5,000 attendees across 3 days
+                      </p>
+                    </div>
+                    <div class="flex items-start">
+                      <div
+                        class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 mt-0.5 mr-3"
+                      >
+                        <i class="ri-check-line ri-sm"></i>
+                      </div>
+                      <p class="text-gray-700">
+                        Dedicated booth space with basic furnishings
+                      </p>
+                    </div>
+                    <div class="flex items-start">
+                      <div
+                        class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 mt-0.5 mr-3"
+                      >
+                        <i class="ri-check-line ri-sm"></i>
+                      </div>
+                      <p class="text-gray-700">
+                        Inclusion in festival directory and digital platforms
+                      </p>
+                    </div>
+                    <div class="flex items-start">
+                      <div
+                        class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 mt-0.5 mr-3"
+                      >
+                        <i class="ri-check-line ri-sm"></i>
+                      </div>
+                      <p class="text-gray-700">
+                        Networking opportunities with industry leaders
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="text-xl font-bold text-primary mr-3">₱15,000</div>
+                    <div class="text-gray-600">per standard booth</div>
+                  </div>
+                </div>
+                <div>
+                  <form class="space-y-4">
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Business Name</label
+                      >
+                      <input
+                        type="text"
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="Your business name"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Contact Person</label
+                      >
+                      <input
+                        type="text"
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="Full name"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Email Address</label
+                      >
+                      <input
+                        type="email"
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="email@example.com"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Business Category</label
+                      >
+                      <div class="relative">
+                        <select
+                          class="w-full px-4 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pr-8"
+                        >
+                          <option>Select a category</option>
+                          <option>Traditional Crafts</option>
+                          <option>Agriculture & Food</option>
+                          <option>Technology & Innovation</option>
+                          <option>Tourism & Hospitality</option>
+                          <option>Education & Training</option>
+                          <option>Other</option>
+                        </select>
+                        <div
+                          class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                        >
+                          <i class="ri-arrow-down-s-line ri-lg text-gray-500"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="w-full bg-primary text-white py-3 rounded-button font-bold hover:bg-blue-700 transition-colors whitespace-nowrap flex items-center justify-center"
+                    >
+                      Apply for a Booth
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tickets Section -->
+      <section id="tickets" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+              Get Your Tickets
+            </h2>
+            <div class="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+              Secure your spot at BUKFEST 2025 and be part of this exciting
+              celebration of culture, innovation, and entrepreneurship.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div
+              class="ticket-card bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg"
+            >
+              <div class="bg-blue-50 p-6 text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Day Pass</h3>
+                <div class="text-3xl font-bold text-primary mb-2">₱500</div>
+                <p class="text-gray-600">Single day access</p>
+              </div>
+              <div class="p-6">
+                <ul class="space-y-3 mb-6">
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Access to all exhibits and displays</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Entry to cultural performances</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700">Access to general sessions</span>
+                  </li>
+                  <li class="flex items-start text-gray-400">
+                    <i class="ri-close-line ri-sm mt-1 mr-2"></i>
+                    <span>Workshop participation</span>
+                  </li>
+                  <li class="flex items-start text-gray-400">
+                    <i class="ri-close-line ri-sm mt-1 mr-2"></i>
+                    <span>Networking events</span>
+                  </li>
+                  <li class="flex items-start text-gray-400">
+                    <i class="ri-close-line ri-sm mt-1 mr-2"></i>
+                    <span>Festival merchandise</span>
+                  </li>
+                </ul>
+                <button
+                  class="w-full bg-primary text-white py-3 rounded-button font-bold hover:bg-blue-700 transition-colors whitespace-nowrap flex items-center justify-center"
+                >
+                  Select Day Pass
+                </button>
+              </div>
+            </div>
+            <div
+              class="ticket-card bg-white border-2 border-primary rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl relative"
+            >
+              <div
+                class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm font-bold"
+              >
+                MOST POPULAR
+              </div>
+              <div class="bg-blue-100 p-6 text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                  Full Festival Pass
+                </h3>
+                <div class="text-3xl font-bold text-primary mb-2">₱1,200</div>
+                <p class="text-gray-600">All 3 days access</p>
+              </div>
+              <div class="p-6">
+                <ul class="space-y-3 mb-6">
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Access to all exhibits and displays</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Entry to all cultural performances</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Access to all general sessions</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700">2 Workshop participations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700">Evening networking events</span>
+                  </li>
+                  <li class="flex items-start text-gray-400">
+                    <i class="ri-close-line ri-sm mt-1 mr-2"></i>
+                    <span>Festival merchandise</span>
+                  </li>
+                </ul>
+                <button
+                  class="w-full bg-primary text-white py-3 rounded-button font-bold hover:bg-blue-700 transition-colors whitespace-nowrap flex items-center justify-center"
+                >
+                  Get Full Festival Pass
+                </button>
+              </div>
+            </div>
+            <div
+              class="ticket-card bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg "
+            >
+              <div class="bg-yellow-50 p-6 text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2 ">
+                  VIP Experience
+                </h3>
+                <div class="text-3xl font-bold text-primary mb-2">₱2,500</div>
+                <p class="text-gray-600">Premium all-access</p>
+              </div>
+              <div class="p-6">
+                <ul class="space-y-3 mb-6">
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Priority access to all exhibits</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Reserved seating at performances</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Access to all sessions & workshops</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Exclusive VIP networking events</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Meet & greet with key speakers</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="ri-check-line ri-sm text-green-500 mt-1 mr-2"></i>
+                    <span class="text-gray-700"
+                      >Festival merchandise package</span
+                    >
+                  </li>
+                </ul>
+                <button
+                  class="w-full bg-yellow-400 text-gray-900 py-3 rounded-button font-bold hover:bg-yellow-500 transition-colors whitespace-nowrap flex items-center justify-center"
+                >
+                  Get VIP Experience
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-8">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="w-full md:w-2/3 mb-6 md:mb-0 md:pr-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Group & Special Discounts
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  Special rates available for groups, students, seniors, and local
+                  residents. Contact our team for more information on available
+                  discounts.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <div class="bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <div class="text-sm text-gray-600">Groups (10+)</div>
+                    <div class="text-lg font-bold text-primary">15% Off</div>
+                  </div>
+                  <div class="bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <div class="text-sm text-gray-600">Students</div>
+                    <div class="text-lg font-bold text-primary">20% Off</div>
+                  </div>
+                  <div class="bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <div class="text-sm text-gray-600">Seniors</div>
+                    <div class="text-lg font-bold text-primary">25% Off</div>
+                  </div>
+                  <div class="bg-white px-4 py-2 rounded-lg shadow-sm">
+                    <div class="text-sm text-gray-600">Local Residents</div>
+                    <div class="text-lg font-bold text-primary">10% Off</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md">
+                <h4 class="text-lg font-bold text-gray-900 mb-4">
+                  Contact for Group Bookings
+                </h4>
+                <form class="space-y-4">
+                  <div>
+                    <input
+                      type="text"
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="Email Address"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="Group Size"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-primary text-white py-2 rounded-button font-medium hover:bg-blue-700 transition-colors whitespace-nowrap flex items-center justify-center"
+                  >
+                    Request Group Rate
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sponsors Section -->
+      <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+              Our Sponsors & Partners
+            </h2>
+            <div class="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+              BUKFEST 2025 is made possible through the generous support of our
+              sponsors and partners who share our vision for celebrating culture
+              and innovation.
+            </p>
+          </div>
+          <div class="mb-16">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">
+              Platinum Sponsors
+            </h3>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+              <div
+                class="bg-white p-6 rounded-lg shadow-sm w-40 h-40 flex items-center justify-center"
+              >
+                <div
+                  class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-xl text-gray-400 font-bold">S1</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-6 rounded-lg shadow-sm w-40 h-40 flex items-center justify-center"
+              >
+                <div
+                  class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-xl text-gray-400 font-bold">S2</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-6 rounded-lg shadow-sm w-40 h-40 flex items-center justify-center"
+              >
+                <div
+                  class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-xl text-gray-400 font-bold">S3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-16">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">
+              Gold Sponsors
+            </h3>
+            <div class="flex flex-wrap justify-center items-center gap-6">
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm w-32 h-32 flex items-center justify-center"
+              >
+                <div
+                  class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg text-gray-400 font-bold">S4</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm w-32 h-32 flex items-center justify-center"
+              >
+                <div
+                  class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg text-gray-400 font-bold">S5</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm w-32 h-32 flex items-center justify-center"
+              >
+                <div
+                  class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg text-gray-400 font-bold">S6</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm w-32 h-32 flex items-center justify-center"
+              >
+                <div
+                  class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg text-gray-400 font-bold">S7</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm w-32 h-32 flex items-center justify-center"
+              >
+                <div
+                  class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg text-gray-400 font-bold">S8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+                Become a Sponsor
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <p class="text-gray-700 mb-6">
+                    Join our community of forward-thinking organizations
+                    supporting cultural celebration and innovation in Bukidnon. As
+                    a sponsor, you'll gain valuable brand exposure to a diverse
+                    audience of cultural enthusiasts, entrepreneurs, and community
+                    leaders.
+                  </p>
+                  <div class="space-y-4 mb-6">
+                    <div class="flex items-start">
+                      <div
+                        class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white mt-0.5 mr-3"
+                      >
+                        <i class="ri-check-line ri-sm"></i>
+                      </div>
+                      <p class="text-gray-700">
+                        Brand visibility to 5,000+ attendees
+                      </p>
+                    </div>
+                    <div class="flex items-start">
+                      <div
+                        class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white mt-0.5 mr-3"
+                      >
+                        <i class="ri-check-line ri-sm"></i>
+                      </div>
+                      <p class="text-gray-700">
+                        Recognition in all festival materials
+                      </p>
+                    </div>
+                    <div class="flex items-start">
+                      <div
+                        class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white mt-0.5 mr-3"
+                      >
+                        <i class="ri-check-line ri-sm"></i>
+                      </div>
+                      <p class="text-gray-700">
+                        Speaking opportunities at relevant sessions
+                      </p>
+                    </div>
+                    <div class="flex items-start">
+                      <div
+                        class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white mt-0.5 mr-3"
+                      >
+                        <i class="ri-check-line ri-sm"></i>
+                      </div>
+                      <p class="text-gray-700">
+                        VIP access to all festival events
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-4">
+                    <div class="bg-blue-50 px-4 py-2 rounded-lg">
+                      <div class="text-sm text-gray-600">Platinum</div>
+                      <div class="text-lg font-bold text-primary">₱100,000+</div>
+                    </div>
+                    <div class="bg-blue-50 px-4 py-2 rounded-lg">
+                      <div class="text-sm text-gray-600">Gold</div>
+                      <div class="text-lg font-bold text-primary">₱50,000+</div>
+                    </div>
+                    <div class="bg-blue-50 px-4 py-2 rounded-lg">
+                      <div class="text-sm text-gray-600">Silver</div>
+                      <div class="text-lg font-bold text-primary">₱25,000+</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <form class="space-y-4">
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Organization Name</label
+                      >
+                      <input
+                        type="text"
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="Your organization name"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Contact Person</label
+                      >
+                      <input
+                        type="text"
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="Full name"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Email Address</label
+                      >
+                      <input
+                        type="email"
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="email@example.com"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Sponsorship Level</label
+                      >
+                      <div class="relative">
+                        <select
+                          class="w-full px-4 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pr-8"
+                        >
+                          <option>Select a level</option>
+                          <option>Platinum Sponsor</option>
+                          <option>Gold Sponsor</option>
+                          <option>Silver Sponsor</option>
+                          <option>Bronze Sponsor</option>
+                          <option>Custom Package</option>
+                        </select>
+                        <div
+                          class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                        >
+                          <i class="ri-arrow-down-s-line ri-lg text-gray-500"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2"
+                        >Message</label
+                      >
+                      <textarea
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent h-24"
+                        placeholder="Tell us about your organization and sponsorship interests"
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      class="w-full bg-primary text-white py-3 rounded-button font-bold hover:bg-blue-700 transition-colors whitespace-nowrap flex items-center justify-center"
+                    >
+                      Submit Sponsorship Inquiry
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+              Contact & Support
+            </h2>
+            <div class="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+              Have questions about BUKFEST 2025? Our team is here to help. Reach
+              out to us through any of the channels below.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-blue-50 p-8 rounded-lg text-center">
+              <div
+                class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4"
+              >
+                <i class="ri-phone-line ri-lg"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <p class="text-gray-700 mb-2">Mon-Fri, 9AM-5PM</p>
+              <a
+                href="tel:+639123456789"
+                class="text-primary font-medium hover:text-blue-700 transition-colors"
+                >+63 912 345 6789</a
+              >
+            </div>
+            <div class="bg-blue-50 p-8 rounded-lg text-center">
+              <div
+                class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4"
+              >
+                <i class="ri-mail-line ri-lg"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p class="text-gray-700 mb-2">We'll respond within 24 hours</p>
+              <a
+                href="mailto:info@bukfest.ph"
+                class="text-primary font-medium hover:text-blue-700 transition-colors"
+                >info@bukfest.ph</a
+              >
+            </div>
+            <div class="bg-blue-50 p-8 rounded-lg text-center">
+              <div
+                class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4"
+              >
+                <i class="ri-messenger-line ri-lg"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Chat Support</h3>
+              <p class="text-gray-700 mb-2">Live chat available</p>
+              <button
+                class="text-primary font-medium hover:text-blue-700 transition-colors"
+              >
+                Start Chat
+              </button>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                  Send Us a Message
+                </h3>
+                <form class="space-y-4">
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2"
+                      >Your Name</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="Full name"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="email@example.com"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2"
+                      >Subject</label
+                    >
+                    <div class="relative">
+                      <select
+                        class="w-full px-4 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pr-8"
+                      >
+                        <option>Select a subject</option>
+                        <option>Ticket Inquiry</option>
+                        <option>Exhibitor Information</option>
+                        <option>Sponsorship Opportunities</option>
+                        <option>Media & Press</option>
+                        <option>General Inquiry</option>
+                      </select>
+                      <div
+                        class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                      >
+                        <i class="ri-arrow-down-s-line ri-lg text-gray-500"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2"
+                      >Message</label
+                    >
+                    <textarea
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent h-32"
+                      placeholder="How can we help you?"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="bg-primary text-white px-8 py-3 rounded-button font-bold hover:bg-blue-700 transition-colors whitespace-nowrap"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+              <div class="bg-gray-50 p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                  Frequently Asked Questions
+                </h3>
+                <div class="space-y-4">
+                  <div class="border-b border-gray-200 pb-4">
+                    <button
+                      class="flex justify-between items-center w-full text-left"
+                    >
+                      <span class="text-lg font-medium text-gray-900"
+                        >What are the festival dates and hours?</span
+                      >
+                      <i class="ri-add-line ri-lg text-primary"></i>
+                    </button>
+                    <div class="mt-2 text-gray-700">
+                      BUKFEST 2025 will be held from July 10-12, 2025. Festival
+                      hours are 8:00 AM to 9:00 PM daily, with evening cultural
+                      performances extending until 10:00 PM.
+                    </div>
+                  </div>
+                  <div class="border-b border-gray-200 pb-4">
+                    <button
+                      class="flex justify-between items-center w-full text-left"
+                    >
+                      <span class="text-lg font-medium text-gray-900"
+                        >How can I purchase tickets?</span
+                      >
+                      <i class="ri-add-line ri-lg text-primary"></i>
+                    </button>
+                  </div>
+                  <div class="border-b border-gray-200 pb-4">
+                    <button
+                      class="flex justify-between items-center w-full text-left"
+                    >
+                      <span class="text-lg font-medium text-gray-900"
+                        >Is there parking available at the venue?</span
+                      >
+                      <i class="ri-add-line ri-lg text-primary"></i>
+                    </button>
+                  </div>
+                  <div class="border-b border-gray-200 pb-4">
+                    <button
+                      class="flex justify-between items-center w-full text-left"
+                    >
+                      <span class="text-lg font-medium text-gray-900"
+                        >Are there accommodations near the venue?</span
+                      >
+                      <i class="ri-add-line ri-lg text-primary"></i>
+                    </button>
+                  </div>
+                  <div class="border-b border-gray-200 pb-4">
+                    <button
+                      class="flex justify-between items-center w-full text-left"
+                    >
+                      <span class="text-lg font-medium text-gray-900"
+                        >Can I register for specific workshops?</span
+                      >
+                      <i class="ri-add-line ri-lg text-primary"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <button
+                    class="text-primary font-medium hover:text-blue-700 transition-colors flex items-center whitespace-nowrap"
+                  >
+                    View All FAQs
+                    <i class="ri-arrow-right-line ri-sm ml-1"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Newsletter -->
+      <section class="py-16 bg-primary">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+            <p class="text-blue-100 mb-8">
+              Subscribe to our newsletter to receive the latest updates about
+              BUKFEST 2025, including speaker announcements, program details, and
+              special offers.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+              <input
+                type="email"
+                class="flex-1 px-4 py-3 rounded-button border-none focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                placeholder="Your email address"
+              />
+              <button
+                type="submit"
+                class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-button font-bold hover:bg-yellow-300 transition-colors whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p class="text-blue-200 text-sm mt-4">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div>
+              <div class="flex items-center mb-6">
+                <div
+                  class="w-10 h-10 bg-white rounded-full flex items-center justify-center"
+                >
+                  <span class="text-primary font-['Pacifico'] text-lg">logo</span>
+                </div>
+                <span class="ml-3 text-xl font-bold text-white">BUKFEST</span>
+              </div>
+              <p class="text-gray-400 mb-6">
+                Celebrating Bukidnon's cultural heritage and entrepreneurial
+                spirit through a vibrant festival of ideas, innovation, and
+                tradition.
+              </p>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-colors"
+                >
+                  <i class="ri-facebook-fill ri-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-colors"
+                >
+                  <i class="ri-twitter-x-fill ri-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-colors"
+                >
+                  <i class="ri-instagram-fill ri-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-colors"
+                >
+                  <i class="ri-youtube-fill ri-lg"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#schedule"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Schedule</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#speakers"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Speakers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#exhibitors"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Exhibitors</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tickets"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Tickets</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-6">Resources</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >FAQs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Event Map</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Travel Information</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Accommodation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Media Kit</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Sponsorship Packages</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <i class="ri-map-pin-line ri-lg text-primary mt-1 mr-3"></i>
+                  <span class="text-gray-400"
+                    >123 Provincial Highway, Malaybalay City, Bukidnon,
+                    Philippines</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <i class="ri-phone-line ri-lg text-primary mr-3"></i>
+                  <span class="text-gray-400">+63 912 345 6789</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="ri-mail-line ri-lg text-primary mr-3"></i>
+                  <span class="text-gray-400">info@bukfest.ph</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-t border-gray-800 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+              <div class="text-gray-500 mb-4 md:mb-0">
+                &copy; 2025 BUKFEST. All rights reserved.
+              </div>
+              <div class="flex space-x-6">
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-white transition-colors"
+                  >Terms of Service</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-white transition-colors"
+                  >Cookie Policy</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
   </body>
 </html>
