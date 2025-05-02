@@ -1,968 +1,1768 @@
+/* Base Layout and Common Styles */
+:root {
+  --primary-blue: #1a56db;
+  --primary-yellow: #facc15;
+  --primary-green: #22c55e;
+  --primary-light-blue: #17bdf7;
+  --text-dark: #111827;
+  --text-gray: #374151;
+  --text-light-gray: #4b5563;
+  --white: #ffffff;
+  --border-light: #e5e7eb;
+  --shadow-standard: 0px 2px 4px -2px #0000001a, 0px 4px 6px -1px #0000001a;
+  --border-radius-standard: 8px;
+  --border-radius-full: 9999px;
+  --font-poppins-regular: "Poppins-Regular", Helvetica;
+  --font-poppins-medium: "Poppins-Medium", Helvetica;
+  --font-poppins-bold: "Poppins-Bold", Helvetica;
+  --font-cy-grotesk: "Cy Grotesk-KeyBold", Helvetica;
+  --font-bolden: "Bolden-Regular-Regular", Helvetica;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 72px; /* Ensures scroll targets account for fixed navbar */
+}
+
+/* Reset button styles */
+button {
+  all: unset;
+  box-sizing: border-box;
+}
+
+/* JUMBLETRON SECTION */
 .JUMBLETRON {
-    position: relative;
-    width: 1920px;
-    height: 1080px;
-    background-image: url(../images/bg.png);
-    background-size: cover;
-    background-position: 50% 50%;
-  }
-  
-  .JUMBLETRON .COUNTDOWN-TIMER {
-    position: absolute;
-    width: 374px;
-    height: 128px;
-    top: 917px;
-    left: 210px;
-  }
-  
-  .JUMBLETRON .paragraph-overlay {
-    position: absolute;
-    width: 80px;
-    height: 88px;
-    top: 40px;
-    left: 0;
-    background-color: #ffffffd9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px #0000001a;
-  }
-  
-  .JUMBLETRON .text-wrapper {
-    width: 31px;
-    left: 25px;
-    position: absolute;
-    height: 32px;
-    top: 15px;
-    font-family: "Poppins-Bold", Helvetica;
-    font-weight: 700;
-    color: #1a56db;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 32px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .div {
-    position: absolute;
-    width: 30px;
-    height: 16px;
-    top: 47px;
-    left: 25px;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #4b5563;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 16px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .paragraph-overlay-2 {
-    width: 80px;
-    left: 96px;
-    position: absolute;
-    height: 88px;
-    top: 40px;
-    background-color: #ffffffd9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px #0000001a;
-  }
-  
-  .JUMBLETRON .text-wrapper-2 {
-    width: 26px;
-    left: 27px;
-    position: absolute;
-    height: 32px;
-    top: 15px;
-    font-family: "Poppins-Bold", Helvetica;
-    font-weight: 700;
-    color: #1a56db;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 32px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .text-wrapper-3 {
-    position: absolute;
-    width: 35px;
-    height: 16px;
-    top: 47px;
-    left: 23px;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #4b5563;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 16px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .paragraph-overlay-3 {
-    width: 80px;
-    left: 192px;
-    position: absolute;
-    height: 88px;
-    top: 40px;
-    background-color: #ffffffd9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px #0000001a;
-  }
-  
-  .JUMBLETRON .text-wrapper-4 {
-    width: 28px;
-    left: 26px;
-    position: absolute;
-    height: 32px;
-    top: 15px;
-    font-family: "Poppins-Bold", Helvetica;
-    font-weight: 700;
-    color: #1a56db;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 32px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .text-wrapper-5 {
-    position: absolute;
-    width: 47px;
-    height: 16px;
-    top: 47px;
-    left: 17px;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #4b5563;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 16px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .paragraph-overlay-4 {
-    width: 84px;
-    left: 288px;
-    position: absolute;
-    height: 88px;
-    top: 40px;
-    background-color: #ffffffd9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px #0000001a;
-  }
-  
-  .JUMBLETRON .text-wrapper-6 {
-    width: 28px;
-    left: 28px;
-    position: absolute;
-    height: 32px;
-    top: 15px;
-    font-family: "Poppins-Bold", Helvetica;
-    font-weight: 700;
-    color: #1a56db;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 32px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .text-wrapper-7 {
-    position: absolute;
-    width: 52px;
-    height: 16px;
-    top: 47px;
-    left: 16px;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #4b5563;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 16px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .text-wrapper-8 {
-    position: absolute;
-    width: 149px;
-    height: 28px;
-    top: 0;
-    left: 0;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #304eff;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: 28px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .overlap {
-    position: absolute;
-    width: 490px;
-    height: 598px;
-    top: 263px;
-    left: 195px;
-  }
-  
-  .JUMBLETRON .buttons {
-    position: absolute;
-    width: 490px;
-    height: 56px;
-    top: 542px;
-    left: 0;
-  }
-  
-  .JUMBLETRON .GET-TICKETS {
-    position: absolute;
-    width: 247px;
-    height: 56px;
-    top: 0;
-    left: 0;
-    background-color: #304eff;
-    border-radius: 8px;
-  }
-  
-  .JUMBLETRON .icon {
-    left: 32px;
-    position: absolute;
-    width: 25px;
-    height: 24px;
-    top: 16px;
-  }
-  
-  .JUMBLETRON .text-wrapper-9 {
-    position: absolute;
-    width: 150px;
-    height: 25px;
-    top: 14px;
-    left: 65px;
-    font-family: "Poppins-Bold", Helvetica;
-    font-weight: 700;
-    color: #fffd02;
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 28px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .WATCH-PROMO {
-    position: absolute;
-    width: 227px;
-    height: 56px;
-    top: 0;
-    left: 263px;
-    background-color: #facc15;
-    border-radius: 8px;
-  }
-  
-  .JUMBLETRON .vector-wrapper {
-    left: 34px;
-    position: absolute;
-    width: 25px;
-    height: 24px;
-    top: 16px;
-  }
-  
-  .JUMBLETRON .vector {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 2px;
-    left: 2px;
-  }
-  
-  .JUMBLETRON .text-wrapper-10 {
-    position: absolute;
-    width: 127px;
-    height: 25px;
-    top: 13px;
-    left: 67px;
-    font-family: "Poppins-Bold", Helvetica;
-    font-weight: 700;
-    color: #1e3a8a;
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 28px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .text-wrapper-11 {
-    position: absolute;
-    width: 349px;
-    height: 102px;
-    top: 447px;
-    left: 15px;
-    font-family: "Cy Grotesk Wide-Bold", Helvetica;
-    font-weight: 700;
-    color: #f55198;
-    font-size: 34px;
-    letter-spacing: 0;
-    line-height: 24px;
-  }
-  
-  .JUMBLETRON .logo-BUKFEST-VERT {
-    position: absolute;
-    width: 374px;
-    height: 470px;
-    top: 0;
-    left: 15px;
-  }
-  
-  .JUMBLETRON .IMG-SPEAKERS {
-    position: absolute;
-    width: 1054px;
-    height: 910px;
-    top: 170px;
-    left: 739px;
-    object-fit: cover;
-  }
-  
-  .JUMBLETRON .BBS-LOGO {
-    position: absolute;
-    width: 194px;
-    height: 70px;
-    top: 193px;
-    left: 227px;
-    background-image: url(./assets/images/BBC-LOGO-BLACK.png);
-    background-size: cover;
-    background-position: 50% 50%;
-  }
-  
-  .JUMBLETRON .nav {
-    position: sticky;
-    width: 1920px;
-    height: 72px;
-    top: -1px;
-    left: 0;
-    background-color: #fffffff2;
-    box-shadow: 0px 2px 4px -2px #0000001a, 0px 4px 6px -1px #0000001a;
-  }
-  
-  .JUMBLETRON .overlap-group {
-    position: relative;
-    width: 1536px;
-    height: 72px;
-    left: 192px;
-  }
-  
-  .JUMBLETRON .container {
-    position: absolute;
-    width: 1536px;
-    height: 72px;
-    top: 0;
-    left: 0;
-  }
-  
-  .JUMBLETRON .link {
-    width: 48px;
-    left: 499px;
-    position: absolute;
-    height: 24px;
-    top: 24px;
-  }
-  
-  .JUMBLETRON .text-wrapper-12 {
-    position: absolute;
-    width: 48px;
-    height: 23px;
-    top: -1px;
-    left: 0;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #1f2937;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .div-wrapper {
-    width: 74px;
-    left: 579px;
-    position: absolute;
-    height: 24px;
-    top: 24px;
-  }
-  
-  .JUMBLETRON .text-wrapper-13 {
-    position: absolute;
-    width: 75px;
-    height: 23px;
-    top: -1px;
-    left: 0;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #1f2937;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .link-2 {
-    width: 73px;
-    left: 685px;
-    position: absolute;
-    height: 24px;
-    top: 24px;
-  }
-  
-  .JUMBLETRON .text-wrapper-14 {
-    position: absolute;
-    width: 74px;
-    height: 23px;
-    top: -1px;
-    left: 0;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #1f2937;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .link-3 {
-    width: 75px;
-    left: 790px;
-    position: absolute;
-    height: 24px;
-    top: 24px;
-  }
-  
-  .JUMBLETRON .text-wrapper-15 {
-    position: absolute;
-    width: 76px;
-    height: 23px;
-    top: -1px;
-    left: 0;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #1f2937;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .link-4 {
-    width: 55px;
-    left: 898px;
-    position: absolute;
-    height: 24px;
-    top: 24px;
-  }
-  
-  .JUMBLETRON .text-wrapper-16 {
-    position: absolute;
-    width: 55px;
-    height: 23px;
-    top: -1px;
-    left: 0;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #1f2937;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .link-5 {
-    width: 65px;
-    left: 984px;
-    position: absolute;
-    height: 24px;
-    top: 24px;
-  }
-  
-  .JUMBLETRON .text-wrapper-17 {
-    position: absolute;
-    width: 65px;
-    height: 23px;
-    top: -1px;
-    left: 0;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #1f2937;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .button {
-    all: unset;
-    box-sizing: border-box;
-    position: absolute;
-    width: 136px;
-    height: 40px;
-    top: 16px;
-    left: 1384px;
-    background-color: #1a56db;
-    border-radius: 8px;
-  }
-  
-  .JUMBLETRON .text-wrapper-18 {
-    position: absolute;
-    width: 89px;
-    height: 23px;
-    top: 7px;
-    left: 24px;
-    font-family: "Poppins-Medium", Helvetica;
-    font-weight: 500;
-    color: #ffffff;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .JUMBLETRON .logo-BUKFEST-HORIZ {
-    position: absolute;
-    width: 131px;
-    height: 61px;
-    top: 7px;
-    left: 16px;
-  }
-  
-  .about-bukfest {
-    width: 1920px;
-    height: 1241px;
-    background-color: #facc15;
-    border: 1px solid;
-    border-color: transparent;
-  }
-  
-  .about-bukfest .container {
-    position: relative;
-    width: 1536px;
-    height: 1081px;
-    top: 80px;
-    left: 192px;
-  }
-  
-  .about-bukfest .overlap {
-    position: relative;
-    width: 1980px;
-    height: 2911px;
-    top: -720px;
-    left: -222px;
-  }
-  
-  .about-bukfest .text-wrapper {
-    position: absolute;
-    width: 278px;
-    height: 51px;
-    top: 713px;
-    left: 238px;
-    font-family: "Poppins-Bold", Helvetica;
-    font-weight: 700;
-    color: #111827;
-    font-size: 36px;
-    letter-spacing: 0;
-    line-height: 40px;
-  }
-  
-  .about-bukfest .POLYGON {
-    position: absolute;
-    width: 1920px;
-    height: 2911px;
-    top: 0;
-    left: 30px;
-  }
-  
-  .about-bukfest .logo-BUKFEST-HORIZ {
-    position: absolute;
-    width: 210px;
-    height: 98px;
-    top: 700px;
-    left: 367px;
-  }
-  
-  .about-bukfest .background {
-    position: absolute;
-    width: 80px;
-    height: 4px;
-    top: 776px;
-    left: 238px;
-    background-color: #fffa02;
-  }
-  
-  .about-bukfest .BUKFEST-is-wrapper {
-    position: absolute;
-    width: 768px;
-    height: 134px;
-    top: 814px;
-    left: 224px;
-  }
-  
-  .about-bukfest .BUKFEST-is {
-    position: absolute;
-    width: 539px;
-    height: 84px;
-    top: 7px;
-    left: 11px;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #374151;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: 28px;
-  }
-  
-  .about-bukfest .background-shadow {
-    position: absolute;
-    width: 480px;
-    height: 268px;
-    top: 982px;
-    left: 238px;
-    background-color: #17bdf7;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px -2px #0000001a, 0px 4px 6px -1px #0000001a;
-  }
-  
-  .about-bukfest .overlap-group {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    top: 32px;
-    left: 208px;
-    background-color: #304eff;
-    border-radius: 9999px;
-  }
-  
-  .about-bukfest .icon-locator {
-    position: absolute;
-    width: 31px;
-    height: 42px;
-    top: 11px;
-    left: 17px;
-  }
-  
-  .about-bukfest .heading-cultural {
-    position: absolute;
-    width: 350px;
-    height: 28px;
-    top: 119px;
-    left: 65px;
-    font-family: "Bolden-Regular-Regular", Helvetica;
-    font-weight: 400;
-    color: #111827;
-    font-size: 36px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 28px;
-    white-space: nowrap;
-  }
-  
-  .about-bukfest .div {
-    position: absolute;
-    width: 415px;
-    height: 71px;
-    top: 163px;
-    left: 33px;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #111827;
-    font-size: 15px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 24px;
-  }
-  
-  .about-bukfest .background-shadow-2 {
-    left: 750px;
-    background-color: #fffa02;
-    position: absolute;
-    width: 480px;
-    height: 268px;
-    top: 982px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px -2px #0000001a, 0px 4px 6px -1px #0000001a;
-  }
-  
-  .about-bukfest .icon-connect-wrapper {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    top: 32px;
-    left: 208px;
-    background-color: #facc15;
-    border-radius: 9999px;
-  }
-  
-  .about-bukfest .icon-connect {
-    position: absolute;
-    width: 38px;
-    height: 46px;
-    top: 9px;
-    left: 16px;
-  }
-  
-  .about-bukfest .heading-innovation {
-    position: absolute;
-    width: 364px;
-    height: 28px;
-    top: 119px;
-    left: 58px;
-    font-family: "Bolden-Regular-Regular", Helvetica;
-    font-weight: 400;
-    color: #002563;
-    font-size: 36px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 28px;
-    white-space: nowrap;
-  }
-  
-  .about-bukfest .p {
-    position: absolute;
-    width: 430px;
-    height: 71px;
-    top: 163px;
-    left: 25px;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #374151;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 24px;
-  }
-  
-  .about-bukfest .background-shadow-3 {
-    left: 1262px;
-    background-color: #22c55e;
-    position: absolute;
-    width: 480px;
-    height: 268px;
-    top: 982px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px -2px #0000001a, 0px 4px 6px -1px #0000001a;
-  }
-  
-  .about-bukfest .icon-heart-wrapper {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    top: 32px;
-    left: 208px;
-    background-color: #01945e;
-    border-radius: 9999px;
-  }
-  
-  .about-bukfest .icon-heart {
-    position: absolute;
-    width: 49px;
-    height: 38px;
-    top: 19px;
-    left: 7px;
-  }
-  
-  .about-bukfest .heading-community {
-    position: absolute;
-    width: 430px;
-    height: 28px;
-    top: 119px;
-    left: 25px;
-    font-family: "Bolden-Regular-Regular", Helvetica;
-    font-weight: 400;
-    color: #111827;
-    font-size: 36px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 28px;
-    white-space: nowrap;
-  }
-  
-  .about-bukfest .equip-business {
-    position: absolute;
-    width: 395px;
-    height: 71px;
-    top: 163px;
-    left: 43px;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #374151;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 24px;
-  }
-  
-  .about-bukfest .overlap-wrapper {
-    position: absolute;
-    width: 1980px;
-    height: 553px;
-    top: 1385px;
-    left: 0;
-    background-color: #ffffff;
-    border-radius: 16px;
-    border: 1px solid;
-    border-color: #000000;
-  }
-  
-  .about-bukfest .overlap-2 {
-    position: relative;
-    width: 1917px;
-    height: 398px;
-    top: 5px;
-    left: 32px;
-  }
-  
-  .about-bukfest .heading-payment {
-    position: absolute;
-    width: 231px;
-    height: 32px;
-    top: 26px;
-    left: 855px;
-    font-family: "Cy Grotesk-KeyBold", Helvetica;
-    font-weight: 700;
-    color: #111827;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 32px;
-    white-space: nowrap;
-  }
-  
-  .about-bukfest .BBC-LOGO-wrapper {
-    position: absolute;
-    width: 951px;
-    height: 321px;
-    top: 0;
-    left: 0;
-    border-radius: 16px;
-  }
-  
-  .about-bukfest .BBC-LOGO {
-    position: relative;
-    width: 276px;
-    height: 73px;
-    top: 125px;
-    left: 337px;
-    background-image: url(./img/BBC-LOGO-BLACK.png);
-    background-size: cover;
-    background-position: 50% 50%;
-  }
-  
-  .about-bukfest .LOGO-wrapper {
-    position: absolute;
-    width: 951px;
-    height: 321px;
-    top: 0;
-    left: 483px;
-    border-radius: 16px;
-  }
-  
-  .about-bukfest .LOGO {
-    position: relative;
-    width: 126px;
-    height: 95px;
-    top: 113px;
-    left: 412px;
-    background-image: url(./img/a14-LOGO-COLORED.png);
-    background-size: cover;
-    background-position: 50% 50%;
-  }
-  
-  .about-bukfest .DEVCON-LOGO-HORIZ-wrapper {
-    position: absolute;
-    width: 951px;
-    height: 321px;
-    top: 0;
-    left: 966px;
-    border-radius: 16px;
-  }
-  
-  .about-bukfest .DEVCON-LOGO-HORIZ {
-    position: relative;
-    width: 333px;
-    height: 105px;
-    top: 109px;
-    left: 309px;
-    background-image: url(./img/DEVCON-bukidnon-balck.png);
-    background-size: cover;
-    background-position: 50% 50%;
-  }
-  
-  .about-bukfest .text-wrapper-2 {
-    position: absolute;
-    width: 473px;
-    height: 24px;
-    top: 254px;
-    left: 722px;
-    font-family: "Cy Grotesk-KeyDemi", Helvetica;
-    font-weight: 400;
-    color: #374151;
-    font-size: 21px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .about-bukfest .group {
-    position: absolute;
-    width: 879px;
-    height: 88px;
-    top: 310px;
-    left: 675px;
-  }
-  
-  .about-bukfest .BUKIDNON-LOGO {
-    position: absolute;
-    width: 87px;
-    height: 87px;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-  }
-  
-  .about-bukfest .DICT-LOGO {
-    position: absolute;
-    width: 88px;
-    height: 88px;
-    top: 0;
-    left: 157px;
-    object-fit: cover;
-  }
-  
-  .about-bukfest .DOST-LOGO {
-    position: absolute;
-    width: 87px;
-    height: 88px;
-    top: 0;
-    left: 315px;
-  }
-  
-  .about-bukfest .ROBINSONS-LOGO {
-    width: 407px;
-    left: 472px;
-    position: absolute;
-    height: 86px;
-    top: 0;
-  }
-  
-  .about-bukfest .ROBINSONS-EMBLEM {
-    width: 86px;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    height: 86px;
-    top: 0;
-  }
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background-image: url(../images/bg.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  padding-top: 72px; /* Add padding equal to navbar height */
+}
+
+.JUMBLETRON .COUNTDOWN-TIMER {
+  position: absolute;
+  width: 374px;
+  height: 128px;
+  top: 917px;
+  left: 210px;
+}
+
+.JUMBLETRON .paragraph-overlay,
+.JUMBLETRON .paragraph-overlay-2,
+.JUMBLETRON .paragraph-overlay-3,
+.JUMBLETRON .paragraph-overlay-4 {
+  position: absolute;
+  width: 80px;
+  height: 88px;
+  top: 40px;
+  background-color: #ffffffd9;
+  border-radius: var(--border-radius-standard);
+  box-shadow: var(--shadow-standard);
+}
+
+.JUMBLETRON .paragraph-overlay { left: 0; }
+.JUMBLETRON .paragraph-overlay-2 { left: 96px; }
+.JUMBLETRON .paragraph-overlay-3 { left: 192px; }
+.JUMBLETRON .paragraph-overlay-4 {
+  width: 84px;
+  left: 288px;
+}
+
+.JUMBLETRON .text-wrapper,
+.JUMBLETRON .text-wrapper-2,
+.JUMBLETRON .text-wrapper-4,
+.JUMBLETRON .text-wrapper-6 {
+  position: absolute;
+  height: 32px;
+  top: 15px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.JUMBLETRON .text-wrapper { width: 31px; left: 25px; }
+.JUMBLETRON .text-wrapper-2 { width: 26px; left: 27px; }
+.JUMBLETRON .text-wrapper-4 { width: 28px; left: 26px; }
+.JUMBLETRON .text-wrapper-6 { width: 28px; left: 28px; }
+
+.JUMBLETRON .div,
+.JUMBLETRON .text-wrapper-3,
+.JUMBLETRON .text-wrapper-5,
+.JUMBLETRON .text-wrapper-7 {
+  position: absolute;
+  top: 47px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: var(--text-light-gray);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.JUMBLETRON .div { width: 30px; height: 16px; left: 25px; }
+.JUMBLETRON .text-wrapper-3 { width: 35px; height: 16px; left: 23px; }
+.JUMBLETRON .text-wrapper-5 { width: 47px; height: 16px; left: 17px; }
+.JUMBLETRON .text-wrapper-7 { width: 52px; height: 16px; left: 16px; }
+
+.JUMBLETRON .text-wrapper-8 {
+  position: absolute;
+  width: 149px;
+  height: 28px;
+  top: 0;
+  left: 0;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: #304eff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.JUMBLETRON .overlap {
+  position: absolute;
+  width: 490px;
+  height: 598px;
+  top: 263px;
+  left: 195px;
+}
+
+.JUMBLETRON .buttons {
+  position: absolute;
+  width: 490px;
+  height: 56px;
+  top: 542px;
+  left: 0;
+}
+
+.JUMBLETRON .GET-TICKETS,
+.JUMBLETRON .WATCH-PROMO {
+  position: absolute;
+  width: 247px;
+  height: 56px;
+  top: 0;
+  border-radius: var(--border-radius-standard);
+}
+
+.JUMBLETRON .GET-TICKETS {
+  left: 0;
+  background-color: #304eff;
+}
+
+.JUMBLETRON .WATCH-PROMO {
+  width: 227px;
+  left: 263px;
+  background-color: var(--primary-yellow);
+}
+
+.JUMBLETRON .icon {
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  top: 16px;
+  left: 32px;
+}
+
+.JUMBLETRON .vector-wrapper {
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  top: 16px;
+  left: 34px;
+}
+
+.JUMBLETRON .vector {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+}
+
+.JUMBLETRON .text-wrapper-9,
+.JUMBLETRON .text-wrapper-10 {
+  position: absolute;
+  height: 25px;
+  top: 14px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.JUMBLETRON .text-wrapper-9 {
+  width: 150px;
+  left: 65px;
+  color: #fffd02;
+}
+
+.JUMBLETRON .text-wrapper-10 {
+  width: 127px;
+  left: 67px;
+  color: #1e3a8a;
+}
+
+.JUMBLETRON .text-wrapper-11 {
+  position: absolute;
+  width: 349px;
+  height: 102px;
+  top: 447px;
+  left: 15px;
+  font-family: "Cy Grotesk Wide-Bold", Helvetica;
+  font-weight: 700;
+  color: #f55198;
+  font-size: 34px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.JUMBLETRON .logo-BUKFEST-VERT {
+  position: absolute;
+  width: 374px;
+  height: 470px;
+  top: 0;
+  left: 15px;
+}
+
+.JUMBLETRON .IMG-SPEAKERS {
+  position: absolute;
+  width: 1054px;
+  height: 910px;
+  top: 170px;
+  left: 739px;
+  object-fit: cover;
+}
+
+.JUMBLETRON .BBS-LOGO {
+  position: absolute;
+  width: 194px;
+  height: 70px;
+  top: 193px;
+  left: 227px;
+  background-image: url(./assets/images/BBC-LOGO-BLACK.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Navigation Bar */
+.JUMBLETRON .nav {
+  position: fixed;
+  width: 1920px;
+  height: 72px;
+  top: 0;
+  left: 0;
+  background-color: #fffffff2;
+  box-shadow: var(--shadow-standard);
+  z-index: 100;
+}
+
+.JUMBLETRON .overlap-group {
+  position: relative;
+  width: 1536px;
+  height: 72px;
+  left: 192px;
+}
+
+.JUMBLETRON .container {
+  position: absolute;
+  width: 1536px;
+  height: 72px;
+  top: 0;
+  left: 0;
+}
+
+.JUMBLETRON .link,
+.JUMBLETRON .div-wrapper,
+.JUMBLETRON .link-2,
+.JUMBLETRON .link-3,
+.JUMBLETRON .link-4,
+.JUMBLETRON .link-5 {
+  position: absolute;
+  height: 24px;
+  top: 24px;
+}
+
+.JUMBLETRON .link { width: 48px; left: 499px; }
+.JUMBLETRON .div-wrapper { width: 74px; left: 579px; }
+.JUMBLETRON .link-2 { width: 73px; left: 685px; }
+.JUMBLETRON .link-3 { width: 75px; left: 790px; }
+.JUMBLETRON .link-4 { width: 55px; left: 898px; }
+.JUMBLETRON .link-5 { width: 65px; left: 984px; }
+
+.JUMBLETRON .text-wrapper-12,
+.JUMBLETRON .text-wrapper-13,
+.JUMBLETRON .text-wrapper-14,
+.JUMBLETRON .text-wrapper-15,
+.JUMBLETRON .text-wrapper-16,
+.JUMBLETRON .text-wrapper-17 {
+  position: absolute;
+  height: 23px;
+  top: -1px;
+  left: 0;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: #1f2937;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.JUMBLETRON .text-wrapper-12 { width: 48px; }
+.JUMBLETRON .text-wrapper-13 { width: 75px; }
+.JUMBLETRON .text-wrapper-14 { width: 74px; }
+.JUMBLETRON .text-wrapper-15 { width: 76px; }
+.JUMBLETRON .text-wrapper-16 { width: 55px; }
+.JUMBLETRON .text-wrapper-17 { width: 65px; }
+
+.JUMBLETRON .button {
+  position: absolute;
+  width: 136px;
+  height: 40px;
+  top: 16px;
+  left: 1384px;
+  background-color: var(--primary-blue);
+  border-radius: var(--border-radius-standard);
+}
+
+.JUMBLETRON .text-wrapper-18 {
+  position: absolute;
+  width: 89px;
+  height: 23px;
+  top: 7px;
+  left: 24px;
+  font-family: var(--font-poppins-medium);
+  font-weight: 500;
+  color: var(--white);
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.JUMBLETRON .logo-BUKFEST-HORIZ {
+  position: absolute;
+  width: 131px;
+  height: 61px;
+  top: 7px;
+  left: 16px;
+}
+
+/* ABOUT BUKFEST SECTION */
+.about-bukfest {
+  width: 1920px;
+  height: 1241px;
+  background-color: var(--primary-yellow);
+  border: 1px solid transparent;
+}
+
+.about-bukfest .container {
+  position: relative;
+  width: 1536px;
+  height: 1081px;
+  top: 80px;
+  left: 192px;
+}
+
+.about-bukfest .overlap {
+  position: relative;
+  width: 1980px;
+  height: 2911px;
+  top: -720px;
+  left: -222px;
+}
+
+.about-bukfest .text-wrapper {
+  position: absolute;
+  width: 278px;
+  height: 51px;
+  top: 713px;
+  left: 238px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: 40px;
+}
+
+.about-bukfest .POLYGON {
+  position: absolute;
+  width: 1920px;
+  height: 2911px;
+  top: 0;
+  left: 30px;
+}
+
+.about-bukfest .logo-BUKFEST-HORIZ {
+  position: absolute;
+  width: 210px;
+  height: 98px;
+  top: 700px;
+  left: 367px;
+}
+
+.about-bukfest .background {
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  top: 776px;
+  left: 238px;
+  background-color: #fffa02;
+}
+
+.about-bukfest .BUKFEST-is-wrapper {
+  position: absolute;
+  width: 768px;
+  height: 134px;
+  top: 814px;
+  left: 224px;
+}
+
+.about-bukfest .BUKFEST-is {
+  position: absolute;
+  width: 539px;
+  height: 84px;
+  top: 7px;
+  left: 11px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: var(--text-gray);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+/* Feature Cards */
+.about-bukfest .background-shadow,
+.about-bukfest .background-shadow-2,
+.about-bukfest .background-shadow-3 {
+  position: absolute;
+  width: 480px;
+  height: 268px;
+  top: 982px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-standard);
+}
+
+.about-bukfest .background-shadow {
+  left: 238px;
+  background-color: var(--primary-light-blue);
+}
+
+.about-bukfest .background-shadow-2 {
+  left: 750px;
+  background-color: #fffa02;
+}
+
+.about-bukfest .background-shadow-3 {
+  left: 1262px;
+  background-color: var(--primary-green);
+}
+
+/* Icon Containers */
+.about-bukfest .overlap-group,
+.about-bukfest .icon-connect-wrapper,
+.about-bukfest .icon-heart-wrapper {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 32px;
+  left: 208px;
+  border-radius: var(--border-radius-full);
+}
+
+.about-bukfest .overlap-group { background-color: #304eff; }
+.about-bukfest .icon-connect-wrapper { background-color: var(--primary-yellow); }
+.about-bukfest .icon-heart-wrapper { background-color: #01945e; }
+
+/* Icons */
+.about-bukfest .icon-locator {
+  position: absolute;
+  width: 31px;
+  height: 42px;
+  top: 11px;
+  left: 17px;
+}
+
+.about-bukfest .icon-connect {
+  position: absolute;
+  width: 38px;
+  height: 46px;
+  top: 9px;
+  left: 16px;
+}
+
+.about-bukfest .icon-heart {
+  position: absolute;
+  width: 49px;
+  height: 38px;
+  top: 19px;
+  left: 7px;
+}
+
+/* Feature Card Headings */
+.about-bukfest .heading-cultural,
+.about-bukfest .heading-innovation,
+.about-bukfest .heading-community {
+  position: absolute;
+  height: 28px;
+  top: 119px;
+  font-family: var(--font-bolden);
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.about-bukfest .heading-cultural {
+  width: 350px;
+  left: 65px;
+  color: var(--text-dark);
+}
+
+.about-bukfest .heading-innovation {
+  width: 364px;
+  left: 58px;
+  color: #002563;
+}
+
+.about-bukfest .heading-community {
+  width: 430px;
+  left: 25px;
+  color: var(--text-dark);
+}
+
+/* Feature Card Content */
+.about-bukfest .div,
+.about-bukfest .p,
+.about-bukfest .equip-business {
+  position: absolute;
+  height: 71px;
+  top: 163px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.about-bukfest .div {
+  width: 415px;
+  left: 33px;
+  color: var(--text-dark);
+  font-size: 15px;
+}
+
+.about-bukfest .p {
+  width: 430px;
+  left: 25px;
+  color: var(--text-gray);
+  font-size: 16px;
+}
+
+.about-bukfest .equip-business {
+  width: 395px;
+  left: 43px;
+  color: var(--text-gray);
+  font-size: 16px;
+}
+
+/* Partners Section */
+.about-bukfest .overlap-wrapper {
+  position: absolute;
+  width: 1980px;
+  height: 553px;
+  top: 1385px;
+  left: 0;
+  background-color: var(--white);
+  border-radius: 16px;
+  border: 1px solid #000000;
+}
+
+.about-bukfest .overlap-2 {
+  position: relative;
+  width: 1917px;
+  height: 398px;
+  top: 5px;
+  left: 32px;
+}
+
+.about-bukfest .heading-payment {
+  position: absolute;
+  width: 231px;
+  height: 32px;
+  top: 26px;
+  left: 855px;
+  font-family: var(--font-cy-grotesk);
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+/* Partner Logo Containers */
+.about-bukfest .BBC-LOGO-wrapper,
+.about-bukfest .LOGO-wrapper,
+.about-bukfest .DEVCON-LOGO-HORIZ-wrapper {
+  position: absolute;
+  width: 951px;
+  height: 321px;
+  top: 0;
+  border-radius: 16px;
+}
+
+.about-bukfest .BBC-LOGO-wrapper { left: 0; }
+.about-bukfest .LOGO-wrapper { left: 483px; }
+.about-bukfest .DEVCON-LOGO-HORIZ-wrapper { left: 966px; }
+
+/* Partner Logos */
+.about-bukfest .BBC-LOGO,
+.about-bukfest .LOGO,
+.about-bukfest .DEVCON-LOGO-HORIZ {
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.about-bukfest .BBC-LOGO {
+  width: 276px;
+  height: 73px;
+  top: 125px;
+  left: 337px;
+  background-image: url(../images/bbc.png);
+}
+
+.about-bukfest .LOGO {
+  width: 126px;
+  height: 95px;
+  top: 113px;
+  left: 412px;
+  background-image: url(../images/a14.png);
+}
+
+.about-bukfest .DEVCON-LOGO-HORIZ {
+  width: 333px;
+  height: 105px;
+  top: 109px;
+  left: 309px;
+  background-image: url(../images/devcon.png);
+}
+
+.about-bukfest .text-wrapper-2 {
+  position: absolute;
+  width: 473px;
+  height: 24px;
+  top: 254px;
+  left: 722px;
+  font-family: "Cy Grotesk-KeyDemi", Helvetica;
+  font-weight: 400;
+  color: var(--text-gray);
+  font-size: 21px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+/* Partner Logos Group */
+.about-bukfest .group {
+  position: absolute;
+  width: 879px;
+  height: 88px;
+  top: 310px;
+  left: 675px;
+}
+
+.about-bukfest .BUKIDNON-LOGO,
+.about-bukfest .DICT-LOGO,
+.about-bukfest .DOST-LOGO {
+  position: absolute;
+  height: 88px;
+  top: 0;
+}
+
+.about-bukfest .BUKIDNON-LOGO {
+  width: 87px;
+  left: 0;
+  object-fit: cover;
+}
+
+.about-bukfest .DICT-LOGO {
+  width: 88px;
+  left: 157px;
+  object-fit: cover;
+}
+
+.about-bukfest .DOST-LOGO {
+  width: 87px;
+  left: 315px;
+}
+
+.about-bukfest .ROBINSONS-LOGO {
+  position: absolute;
+  width: 407px;
+  height: 86px;
+  top: 0;
+  left: 472px;
+}
+
+.about-bukfest .ROBINSONS-EMBLEM {
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+/* EVENT SCHEDULE SECTION */
+.section {
+  width: 1920px;
+  height: 2240px;
+  background-color: var(--primary-light-blue);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.section .container {
+  position: relative;
+  width: 1536px;
+  height: 2080px;
+  top: 80px;
+  left: 192px;
+  z-index: 1;
+}
+
+.section .overlap {
+  position: absolute;
+  width: 1920px;
+  height: 2240px;
+  top: -87px;
+  left: -192px;
+  background-image: url(../images/poly2.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.section .heading-event {
+  position: absolute;
+  width: 283px;
+  height: 40px;
+  top: 86px;
+  left: 819px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 40px;
+  white-space: nowrap;
+}
+
+.section .background {
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  top: 143px;
+  left: 920px;
+  background-color: var(--primary-yellow);
+}
+
+.section .explore-our-three-wrapper {
+  position: absolute;
+  width: 768px;
+  height: 56px;
+  top: 171px;
+  left: 576px;
+}
+
+.section .explore-our-three {
+  position: absolute;
+  width: 679px;
+  height: 53px;
+  top: 0;
+  left: 45px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: var(--text-gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+/* Schedule Container */
+.section .background-shadow {
+  position: absolute;
+  width: 1504px;
+  height: 925px;
+  top: 291px;
+  left: 208px;
+  background-color: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-standard);
+  z-index: 2;
+}
+
+.section .horizontal-border {
+  position: absolute;
+  width: 1504px;
+  height: 57px;
+  top: 0;
+  left: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--border-light);
+}
+
+/* Day Tabs */
+.section .button,
+.section .div-wrapper,
+.section .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 501px;
+  height: 56px;
+  top: 0;
+}
+
+.section .button {
+  left: 0;
+  background-color: #ff6b00;
+}
+
+.section .div-wrapper {
+  left: 501px;
+  background-color: var(--white);
+}
+
+.section .button-2 {
+  left: 1003px;
+  background-color: var(--white);
+}
+
+.section .text-wrapper,
+.section .div,
+.section .text-wrapper-2 {
+  position: absolute;
+  height: 23px;
+  top: 15px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.section .text-wrapper {
+  width: 105px;
+  left: 198px;
+  color: var(--white);
+}
+
+.section .div {
+  width: 104px;
+  left: 199px;
+  color: var(--text-gray);
+}
+
+.section .text-wrapper-2 {
+  width: 107px;
+  left: 197px;
+  color: var(--text-gray);
+}
+
+/* Schedule Item Containers */
+.section .vertical-border,
+.section .vertical-border-2,
+.section .vertical-border-3,
+.section .vertical-border-4,
+.section .vertical-border-5 {
+  position: absolute;
+  width: 1456px;
+  height: 136px;
+  left: 24px;
+  border-radius: 0px 16px 16px 0px;
+  border-left-width: 4px;
+  border-left-style: solid;
+}
+
+.section .vertical-border {
+  top: 81px;
+  border-color: var(--primary-blue);
+}
+
+.section .vertical-border-2 {
+  top: 241px;
+  border-color: var(--primary-yellow);
+}
+
+.section .vertical-border-3 {
+  top: 401px;
+  border-color: var(--primary-green);
+}
+
+.section .vertical-border-4 {
+  top: 561px;
+  border-color: #60a5fa;
+}
+
+.section .vertical-border-5 {
+  height: 132px;
+  top: 721px;
+  border-color: #a855f7;
+}
+
+/* Time and Location Elements */
+.section .element-AM-AM,
+.section .element-AM-AM-2,
+.section .element-PM-PM,
+.section .element-PM-PM-2,
+.section .element-PM-PM-3 {
+  position: absolute;
+  width: 167px;
+  height: 47px;
+  top: 12px;
+  left: 20px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 400;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.section .element-AM-AM-2 { width: 155px; }
+.section .element-PM-PM { width: 158px; }
+.section .element-PM-PM-2 { width: 164px; }
+.section .element-PM-PM-3 { width: 162px; }
+
+.section .span {
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.section .text-wrapper-3 {
+  font-family: var(--font-poppins-regular);
+  color: var(--text-light-gray);
+}
+
+/* Schedule Item Headings */
+.section .heading-opening,
+.section .heading-keynote,
+.section .heading-workshop,
+.section .heading-panel,
+.section .heading-cultural {
+  position: absolute;
+  height: 28px;
+  top: 12px;
+  left: 375px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.section .heading-opening { width: 449px; }
+.section .heading-keynote { width: 459px; }
+.section .heading-workshop { width: 521px; }
+.section .heading-panel { width: 571px; }
+.section .heading-cultural { width: 391px; }
+
+/* Schedule Descriptions */
+.section .p,
+.section .text-wrapper-5,
+.section .text-wrapper-7,
+.section .text-wrapper-9,
+.section .text-wrapper-11 {
+  position: absolute;
+  height: 24px;
+  top: 48px;
+  left: 375px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: var(--text-gray);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.section .p { width: 951px; }
+.section .text-wrapper-5 { width: 887px; }
+.section .text-wrapper-7 { width: 920px; }
+.section .text-wrapper-9 { width: 916px; }
+.section .text-wrapper-11 { width: 982px; }
+
+/* Speaker Avatars */
+.section .maria-santos,
+.section .jan-ocampo,
+.section .elena-reyes {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 88px;
+  left: 375px;
+  border-radius: var(--border-radius-full);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.section .maria-santos { background-image: url(../images/maria.png); }
+.section .jan-ocampo { background-image: url(../images/jan.png); }
+.section .elena-reyes { background-image: url(../images/elena.png); }
+
+/* Speaker Role Text */
+.section .text-wrapper-4,
+.section .text-wrapper-6,
+.section .text-wrapper-8,
+.section .text-wrapper-10 {
+  position: absolute;
+  height: 24px;
+  top: 88px;
+  left: 415px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: var(--text-gray);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.section .text-wrapper-4 { width: 239px; }
+.section .text-wrapper-6 { width: 268px; }
+.section .text-wrapper-8 { width: 317px; }
+.section .text-wrapper-10 { width: 222px; }
+
+/* Panel Member Avatars Group */
+.section .overlap-group {
+  position: absolute;
+  width: 80px;
+  height: 32px;
+  top: 88px;
+  left: 375px;
+}
+
+.section .ricardo-mendoza,
+.section .ana-lim,
+.section .miguel-santos {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  border-radius: var(--border-radius-full);
+  border: 2px solid var(--white);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.section .ricardo-mendoza {
+  left: 0;
+  background-image: url(../images/ricardo.png);
+}
+
+.section .ana-lim {
+  left: 24px;
+  background-image: url(../images/ana.png);
+}
+
+.section .miguel-santos {
+  left: 48px;
+  background-image: url(../images/miguel.png);
+}
+
+/* Special Event Tag */
+.section .background-2 {
+  position: absolute;
+  width: 117px;
+  height: 28px;
+  top: 88px;
+  left: 375px;
+  background-color: #f3e8ff;
+  border-radius: var(--border-radius-full);
+}
+
+.section .text-wrapper-12 {
+  position: absolute;
+  width: 93px;
+  height: 20px;
+  top: 3px;
+  left: 12px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: #6b21a8;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+/* View Full Schedule Link */
+.section .link {
+  position: absolute;
+  width: 1456px;
+  height: 24px;
+  top: 877px;
+  left: 24px;
+}
+
+.section .text-wrapper-13 {
+  position: absolute;
+  width: 149px;
+  height: 23px;
+  top: -1px;
+  left: 644px;
+  font-family: var(--font-poppins-medium);
+  font-weight: 500;
+  color: var(--primary-blue);
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.section .icon {
+  width: 15px;
+  height: 14px;
+  left: 797px;
+  position: absolute;
+  top: 4px;
+}
+
+/* Location Section */
+.section .background-shadow-2 {
+  position: absolute;
+  width: 1504px;
+  height: 911px;
+  top: 1256px;
+  left: 208px;
+  background-color: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-standard);
+  z-index: 2;
+}
+
+.section .heading-event-2 {
+  position: absolute;
+  width: 150px;
+  height: 28px;
+  top: 23px;
+  left: 24px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.section .background-shadow-wrapper {
+  position: absolute;
+  width: 1456px;
+  height: 819px;
+  top: 68px;
+  left: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-image: url(../images/maps.png);
+  background-size: 100% 100%;
+}
+
+.section .background-shadow-3 {
+  position: relative;
+  width: 371px;
+  height: 96px;
+  top: 707px;
+  left: 16px;
+  background-color: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-standard);
+}
+
+.section .heading-bukidnon {
+  position: absolute;
+  width: 238px;
+  height: 24px;
+  top: 11px;
+  left: 12px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.section .text-wrapper-14 {
+  position: absolute;
+  width: 347px;
+  height: 20px;
+  top: 35px;
+  left: 12px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: var(--text-gray);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.section .button-3 {
+  position: absolute;
+  width: 116px;
+  height: 20px;
+  top: 64px;
+  left: 12px;
+}
+
+.section .img {
+  width: 13px;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  top: 4px;
+}
+
+.section .text-wrapper-15 {
+  position: absolute;
+  width: 99px;
+  height: 20px;
+  top: -1px;
+  left: 17px;
+  font-family: var(--font-poppins-medium);
+  font-weight: 500;
+  color: var(--primary-blue);
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+/* Blue extension to match reference design */
+.section .blue-extension {
+  position: absolute;
+  width: 1920px;
+  height: 300px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-light-blue);
+  z-index: 0;
+}
+
+/* SPEAKERS SECTION */
+.section-SPEAKERS {
+  width: 1920px;
+  height: 1044px;
+  background-color: var(--white);
+  position: relative;
+  z-index: 3;
+  margin-top: 0;
+  background-image: none;
+}
+
+.section-SPEAKERS .container {
+  position: relative;
+  width: 1536px;
+  height: 884px;
+  top: 80px;
+  left: 192px;
+  z-index: 2;
+}
+
+.section-SPEAKERS .heading-featured {
+  position: absolute;
+  width: 348px;
+  height: 40px;
+  top: -1px;
+  left: 594px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 40px;
+  white-space: nowrap;
+  z-index: 2;
+  background-color: var(--white);
+}
+
+.section-SPEAKERS .background {
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  top: 56px;
+  left: 728px;
+  background-color: var(--primary-yellow);
+}
+
+.section-SPEAKERS .meet-our-lineup-of-wrapper {
+  position: absolute;
+  width: 768px;
+  height: 56px;
+  top: 84px;
+  left: 384px;
+  background-color: var(--white);
+  z-index: 2;
+}
+
+.section-SPEAKERS .meet-our-lineup-of {
+  position: absolute;
+  width: 734px;
+  height: 53px;
+  top: 0;
+  left: 17px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: var(--text-gray);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+/* Speaker Category Tabs */
+.section-SPEAKERS .div {
+  position: absolute;
+  width: 571px;
+  height: 48px;
+  top: 204px;
+  left: 482px;
+  background-color: #f3f4f6;
+  border-radius: var(--border-radius-full);
+}
+
+/* Category Tab Buttons */
+.section-SPEAKERS .button,
+.section-SPEAKERS .div-wrapper,
+.section-SPEAKERS .button-2,
+.section-SPEAKERS .button-3,
+.section-SPEAKERS .button-4 {
+  position: absolute;
+  height: 40px;
+  top: 4px;
+  border-radius: var(--border-radius-full);
+}
+
+.section-SPEAKERS .button {
+  width: 130px;
+  left: 4px;
+  background-color: var(--primary-blue);
+}
+
+.section-SPEAKERS .div-wrapper {
+  width: 103px;
+  left: 134px;
+}
+
+.section-SPEAKERS .button-2 {
+  width: 91px;
+  left: 237px;
+}
+
+.section-SPEAKERS .button-3 {
+  width: 118px;
+  left: 328px;
+}
+
+.section-SPEAKERS .button-4 {
+  width: 121px;
+  left: 446px;
+}
+
+/* Category Tab Text */
+.section-SPEAKERS .text-wrapper,
+.section-SPEAKERS .text-wrapper-2,
+.section-SPEAKERS .text-wrapper-3,
+.section-SPEAKERS .text-wrapper-4,
+.section-SPEAKERS .text-wrapper-5 {
+  position: absolute;
+  height: 23px;
+  top: 7px;
+  left: 16px;
+  font-family: var(--font-poppins-medium);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.section-SPEAKERS .text-wrapper {
+  width: 99px;
+  color: var(--white);
+}
+
+.section-SPEAKERS .text-wrapper-2,
+.section-SPEAKERS .text-wrapper-3,
+.section-SPEAKERS .text-wrapper-4,
+.section-SPEAKERS .text-wrapper-5 {
+  color: var(--text-gray);
+}
+
+.section-SPEAKERS .text-wrapper-2 { width: 71px; }
+.section-SPEAKERS .text-wrapper-3 { width: 60px; }
+.section-SPEAKERS .text-wrapper-4 { width: 86px; }
+.section-SPEAKERS .text-wrapper-5 { width: 89px; }
+
+/* Speaker Cards */
+.section-SPEAKERS .CARD-SPEAKER,
+.section-SPEAKERS .background-shadow,
+.section-SPEAKERS .background-shadow-2,
+.section-SPEAKERS .background-shadow-3 {
+  position: absolute;
+  width: 352px;
+  height: 500px;
+  top: 284px;
+  background-color: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-standard);
+}
+
+.section-SPEAKERS .CARD-SPEAKER { left: 16px; }
+.section-SPEAKERS .background-shadow { left: 400px; }
+.section-SPEAKERS .background-shadow-2 { left: 784px; }
+.section-SPEAKERS .background-shadow-3 { left: 1168px; }
+
+/* Speaker Names */
+.section-SPEAKERS .heading-jan-ocampo,
+.section-SPEAKERS .heading-maria-datu,
+.section-SPEAKERS .heading-carlos,
+.section-SPEAKERS .heading-elena {
+  position: absolute;
+  height: 28px;
+  top: 279px;
+  left: 24px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.section-SPEAKERS .heading-jan-ocampo { width: 132px; }
+.section-SPEAKERS .heading-maria-datu { width: 114px; }
+.section-SPEAKERS .heading-carlos { width: 133px; }
+.section-SPEAKERS .heading-elena { width: 122px; }
+
+/* Speaker Roles */
+.section-SPEAKERS .text-wrapper-6,
+.section-SPEAKERS .text-wrapper-8,
+.section-SPEAKERS .text-wrapper-10,
+.section-SPEAKERS .text-wrapper-12 {
+  position: absolute;
+  height: 24px;
+  top: 311px;
+  left: 24px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: var(--primary-blue);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.section-SPEAKERS .text-wrapper-6 { width: 156px; }
+.section-SPEAKERS .text-wrapper-8 { width: 218px; }
+.section-SPEAKERS .text-wrapper-10 { width: 178px; }
+.section-SPEAKERS .text-wrapper-12 { width: 216px; }
+
+/* Speaker Bios */
+.section-SPEAKERS .leading-financial,
+.section-SPEAKERS .dedicated-to,
+.section-SPEAKERS .pioneering,
+.section-SPEAKERS .helping-local {
+  position: absolute;
+  top: 347px;
+  left: 24px;
+  font-family: var(--font-poppins-regular);
+  font-weight: 400;
+  color: var(--text-gray);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.section-SPEAKERS .leading-financial {
+  width: 287px;
+  height: 80px;
+}
+
+.section-SPEAKERS .dedicated-to {
+  width: 278px;
+  height: 60px;
+}
+
+.section-SPEAKERS .pioneering {
+  width: 283px;
+  height: 80px;
+}
+
+.section-SPEAKERS .helping-local {
+  width: 285px;
+  height: 60px;
+}
+
+/* Social Icons */
+.section-SPEAKERS .link,
+.section-SPEAKERS .icon-wrapper,
+.section-SPEAKERS .img-wrapper,
+.section-SPEAKERS .link-2,
+.section-SPEAKERS .link-3,
+.section-SPEAKERS .link-4 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #dbeafe;
+  border-radius: var(--border-radius-full);
+}
+
+/* First speaker social icons */
+.section-SPEAKERS .link {
+  top: 444px;
+  left: 24px;
+}
+
+.section-SPEAKERS .icon-wrapper {
+  top: 444px;
+  left: 68px;
+}
+
+.section-SPEAKERS .img-wrapper {
+  top: 444px;
+  left: 112px;
+}
+
+/* Other speakers social icons */
+.section-SPEAKERS .link-2 {
+  top: 424px;
+  left: 24px;
+}
+
+.section-SPEAKERS .link-3 {
+  top: 424px;
+  left: 68px;
+}
+
+.section-SPEAKERS .link-4 {
+  top: 424px;
+  left: 112px;
+}
+
+.section-SPEAKERS .icon {
+  position: absolute;
+  width: 15px;
+  height: 14px;
+  top: 8px;
+  left: 9px;
+}
+
+/* Speaker Image Containers */
+.section-SPEAKERS .overlap-group,
+.section-SPEAKERS .overlap,
+.section-SPEAKERS .background-wrapper,
+.section-SPEAKERS .overlap-2 {
+  position: absolute;
+  width: 352px;
+  height: 256px;
+  top: 0;
+  left: 0;
+}
+
+/* Jan Ocampo Card */
+.section-SPEAKERS .jan-ocampo {
+  position: absolute;
+  width: 352px;
+  height: 256px;
+  top: 0;
+  left: 0;
+  background-color: #1324ab;
+}
+
+.section-SPEAKERS .THE-PRESENT {
+  position: absolute;
+  width: 279px;
+  height: 242px;
+  top: 14px;
+  left: 37px;
+  object-fit: cover;
+}
+
+/* Maria Datu Card */
+.section-SPEAKERS .overlap {
+  background-image: url(../images/mariad.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Carlos Reyes Card */
+.section-SPEAKERS .background-wrapper {
+  background-image: url(../images/carlosr.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Elena Reyes Card */
+.section-SPEAKERS .overlap-2 {
+  background-image: url(../images/elen.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Speaker Category Tags */
+.section-SPEAKERS .background-2,
+.section-SPEAKERS .background-3,
+.section-SPEAKERS .background-4,
+.section-SPEAKERS .background-5 {
+  position: relative;
+  height: 28px;
+  top: 16px;
+  border-radius: var(--border-radius-full);
+}
+
+.section-SPEAKERS .background-2 {
+  width: 143px;
+  left: 193px;
+  background-color: var(--primary-yellow);
+}
+
+.section-SPEAKERS .background-3 {
+  width: 127px;
+  left: 209px;
+  background-color: var(--primary-blue);
+}
+
+.section-SPEAKERS .background-4 {
+  width: 130px;
+  left: 206px;
+  background-color: var(--primary-green);
+}
+
+.section-SPEAKERS .background-5 {
+  width: 142px;
+  left: 194px;
+  background-color: #60a5fa;
+}
+
+/* Speaker Category Tag Text */
+.section-SPEAKERS .text-wrapper-7,
+.section-SPEAKERS .text-wrapper-9,
+.section-SPEAKERS .text-wrapper-11,
+.section-SPEAKERS .text-wrapper-13 {
+  position: absolute;
+  height: 20px;
+  top: 3px;
+  left: 12px;
+  font-family: var(--font-poppins-medium);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.section-SPEAKERS .text-wrapper-7 {
+  width: 119px;
+  color: #1e3a8a;
+}
+
+.section-SPEAKERS .text-wrapper-9,
+.section-SPEAKERS .text-wrapper-11,
+.section-SPEAKERS .text-wrapper-13 {
+  color: var(--white);
+}
+
+.section-SPEAKERS .text-wrapper-9 { width: 103px; }
+.section-SPEAKERS .text-wrapper-11 { width: 106px; }
+.section-SPEAKERS .text-wrapper-13 { width: 118px; }
+
+/* View All Speakers Button */
+.section-SPEAKERS .button-5 {
+  position: absolute;
+  width: 213px;
+  height: 52px;
+  top: 832px;
+  left: 661px;
+  background-color: var(--white);
+  border-radius: 8px;
+  border: 2px solid var(--primary-blue);
+}
+
+.section-SPEAKERS .text-wrapper-14 {
+  position: absolute;
+  width: 145px;
+  height: 23px;
+  top: 12px;
+  left: 34px;
+  font-family: var(--font-poppins-bold);
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+/* White section divider */
+.white-section-divider {
+  width: 1920px;
+  height: 20px;
+  background-color: var(--white);
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+}
+
   
