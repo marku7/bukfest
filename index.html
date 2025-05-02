@@ -110,6 +110,29 @@
         text-decoration: none;
         color: inherit;
       }
+      .JUMBLETRON .nav .container a:not(.text-wrapper-18) {
+        position: relative;
+        transition: color 0.3s;
+      }
+      .JUMBLETRON .nav .container a:not(.text-wrapper-18):hover {
+        color: #1a56db;
+      }
+      .JUMBLETRON .nav .container a:not(.text-wrapper-18)::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #1a56db;
+        transition: width 0.3s;
+      }
+      .JUMBLETRON .nav .container a:not(.text-wrapper-18):hover::after {
+        width: 100%;
+      }
+      .JUMBLETRON .nav .container a:not(.text-wrapper-18).active::after {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -152,12 +175,12 @@
       <div class="nav">
         <div class="overlap-group">
           <div class="container">
-            <div class="link"><a href="#about" class="text-wrapper-12">About</a></div>
-            <div class="div-wrapper"><a href="#schedule" class="text-wrapper-13">Schedule</a></div>
-            <div class="link-2"><a href="#speakers" class="text-wrapper-14">Speakers</a></div>
-            <div class="link-3"><a href="#exhibitors" class="text-wrapper-15">Exhibitors</a></div>
-            <div class="link-4"><a href="#tickets" class="text-wrapper-16">Tickets</a></div>
-            <div class="link-5"><a href="#contact" class="text-wrapper-17">Contact</a></div>
+            <div class="link"><a href="#about" class="text-wrapper-12 hover:text-primary transition-colors">About</a></div>
+            <div class="div-wrapper"><a href="#schedule" class="text-wrapper-13 hover:text-primary transition-colors">Schedule</a></div>
+            <div class="link-2"><a href="#speakers" class="text-wrapper-14 hover:text-primary transition-colors">Speakers</a></div>
+            <div class="link-3"><a href="#exhibitors" class="text-wrapper-15 hover:text-primary transition-colors">Exhibitors</a></div>
+            <div class="link-4"><a href="#tickets" class="text-wrapper-16 hover:text-primary transition-colors">Tickets</a></div>
+            <div class="link-5"><a href="#contact" class="text-wrapper-17 hover:text-primary transition-colors">Contact</a></div>
             <button class="button"><a href="#tickets" class="text-wrapper-18">Get Tickets</a></button>
           </div>
           <img class="logo-BUKFEST-HORIZ" src="assets/images/bukfest.png" />
@@ -543,7 +566,7 @@
           </div>
           <div class="mt-12 text-center">
             <button
-              class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-button font-bold hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+              class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-button font-bold hover:bg-primary hover:text-white transition-colors whitespace-nowrap outline outline-2 outline-primary"
             >
               View All Speakers
             </button>
@@ -1756,5 +1779,80 @@
           </div>
         </div>
       </footer>
+    </footer>
+    <script>
+      // Script to handle active navigation links based on scroll position
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get all sections that have an ID defined
+        const sections = document.querySelectorAll("section[id], div[id]");
+        
+        // Get all navigation links
+        const navLinks = document.querySelectorAll(".JUMBLETRON .nav .container a:not(.text-wrapper-18)");
+        
+        // Add an event listener for scroll
+        window.addEventListener('scroll', function() {
+          // Get current scroll position
+          let scrollY = window.pageYOffset;
+          
+          // Define a variable to track if any section is active
+          let isAnySectionActive = false;
+          
+          // Loop through sections to find the one in view
+          sections.forEach(current => {
+            if (current.id) { // Make sure section has an ID
+              const sectionHeight = current.offsetHeight;
+              const sectionTop = current.offsetTop - 100; // Offset for header height
+              const sectionId = current.getAttribute("id");
+              
+              // Check if section is in view
+              if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                // Remove active class from all links
+                navLinks.forEach(link => {
+                  link.classList.remove("active");
+                });
+                
+                // Add active class to corresponding navigation link
+                const activeLink = document.querySelector(`.JUMBLETRON .nav .container a[href="#${sectionId}"]:not(.text-wrapper-18)`);
+                if (activeLink) {
+                  activeLink.classList.add("active");
+                  isAnySectionActive = true;
+                }
+              }
+            }
+          });
+          
+          // If user is at the top of the page before any sections (landing area), remove active class from all links
+          if (scrollY < document.getElementById('about').offsetTop - 100) {
+            navLinks.forEach(link => {
+              link.classList.remove("active");
+            });
+          }
+        });
+        
+        // Set active class on load
+        function setActiveOnLoad() {
+          const hash = window.location.hash;
+          if (hash) {
+            navLinks.forEach(link => {
+              // Clear all active states first
+              link.classList.remove("active");
+              // Set active for the matching hash
+              if (link.getAttribute("href") === hash) {
+                link.classList.add("active");
+              }
+            });
+          } else {
+            // If no hash and user is at top of page, don't set any active link
+            if (window.pageYOffset < document.getElementById('about').offsetTop - 100) {
+              navLinks.forEach(link => {
+                link.classList.remove("active");
+              });
+            }
+          }
+        }
+        
+        setActiveOnLoad();
+      });
+    </script>
   </body>
 </html>

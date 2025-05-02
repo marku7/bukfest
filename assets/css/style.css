@@ -256,7 +256,7 @@ button {
   height: 70px;
   top: 193px;
   left: 227px;
-  background-image: url(./assets/images/BBC-LOGO-BLACK.png);
+  background-image: url(../images/bbclogo.png);
   background-size: cover;
   background-position: 50% 50%;
 }
